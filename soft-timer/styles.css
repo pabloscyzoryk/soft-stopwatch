@@ -1,0 +1,167 @@
+/* imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* base */
+
+:root {
+    --primary-color: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-size: 5.5em;
+    margin-top: 7.5vh;
+    transition: 0.35s ease-in-out;
+    cursor: default;
+    line-height: 1;
+}
+
+header::after {
+    background: var(--primary-color);
+    height: 0.5vh;
+    width: 0%;
+    display: block;
+    content: '';
+    position: relative;
+    top: 0;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+header:hover::after {
+   width: 100%;
+}
+
+main {
+    position: relative;
+    top: 8vh;
+    font-size: 10em;
+}
+
+body {
+    transition: 0.2s ease-in-out;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.wrapper > * {
+    font-family: 'Poppins', 'sans-serif';
+    color: var(--primary-color);
+}
+
+.btn-wrapper {
+    position: relative;
+    top: 8vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3vw;
+}
+
+.btn-wrapper p {
+    text-align: center;
+    font-size: 2.5em;
+    transition: 0.35s ease-in-out;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btn-wrapper p::after {
+    background: var(--primary-color);
+    height: 0.25vh;
+    width: 0%;
+    display: block;
+    content: '';
+    position: relative;
+    top: 0;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn-wrapper p:hover::after {
+   width: 100%;
+}
+
+aside {
+    font-size: 2em;
+    position: absolute;
+    left: 5vw;
+    top: 10vw;
+}
+
+.fa-trash {
+    cursor: pointer;
+}
+
+.fa-sun, .fa-moon {
+    position: absolute;
+    font-size: 2vw;
+    right: 5vw;
+    top: 1vw;
+    color: black;
+    transition: ease-in-out 0.1s;
+    cursor: pointer;
+}
+
+.fa-sun:hover, .fa-moon:hover {
+    font-size: 2.1vw;
+}
+
+.body-dark {
+    background: black;
+    --primary-color: rgb(211, 211, 211);
+}
+
+.icon-dark {
+    color: white;
+}
+
+footer {
+    font-family: 'Poppins', 'sans-serif';
+    position: absolute;
+    right: 2vw;
+    bottom: 2vw;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        font-size: 5em;
+    }
+    header {
+        font-size: 3em;
+    }
+    .btn-wrapper {
+        margin-top: 20vw;
+        grid-gap: 15vw;
+    }
+    .btn-wrapper p {
+        font-size: 2em;
+    }
+    .fa-sun, .fa-moon {
+        font-size: 3em;
+        top: 1%;
+    }
+    .fa-sun:hover, .fa-moon:hover {
+        font-size: 3em;
+        top: 1%;
+    }
+    aside {
+        position: relative;
+        margin-top: 5vw;
+    }
+    footer {
+        position: relative;
+        top: 20vw;
+        left: 50vw;
+    }
+}
